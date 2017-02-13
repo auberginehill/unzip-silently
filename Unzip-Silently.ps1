@@ -532,48 +532,44 @@ Unzips zip files to generically named new folders.
 
 .DESCRIPTION
 Unzip-Silently uses the Shell.Application to unzip files that are defined with
-the -FilePath parameter. To enter multiple zip files (or folders) for content
-extraction, please separate each individual entity with a comma. If the filename
-or the directory name includes space characters, please enclose the whole string
-(the individual entity in question) in quotation marks (single or double).
-By default the -FilePath parameter accepts plain filenames (then the current
-directory gets searched for the inputted filename) or 'FullPath' filenames, which
-include the path to the file as well (such as C:\Windows\archive.zip).
-
-If the -Include parameter is used, also paths to a folder may be entered as
--Filepath parameter values, then all the zip files inside the first directory level
-of the specified folder (as indicated by the common command 'dir' for example) are
-added to the list of files to be processed. Furthermore, if the -Recurse parameter
-is used in adjunction with the -Include parameter in the command launching
-Unzip-Silently, the search for zip files under the directory, which is defined with
-the -Filepath parameter is done recursively (i.e. the zip files are searched from
-every subfolder level).
+the -FilePath parameter. By default the -FilePath parameter accepts plain
+filenames (then the current directory gets searched for the inputted filename)
+or 'FullPath' filenames, which include the path to the file as well (such as
+C:\Windows\archive.zip). If the -Include parameter is used, also paths to a folder
+may be entered as -Filepath parameter values, and then all the zip files inside the
+first directory level of the specified folder (as indicated by the common command
+'dir' for example) are added to the list of files to be processed. Furthermore,
+if the -Recurse parameter is used in adjunction with the -Include parameter in
+the command launching Unzip-Silently, the search for zip files under the directory,
+which is defined with the -Filepath parameter, is done recursively (i.e. the zip
+files are searched from every subfolder level).
 
 The naming principle of the new folders follows the original names of the zipped
-files. The zip files are unzipped to new folders, which are created by default to
-the same folder, where each zip file is located. The default output destination
-folder, under which the new folder(s) is/are created, may be changed with the
--Output parameter. When creating new folders Unzip-Silently tries to preserve
-pre-existing content rather than overwrite any existing folders (or files
-eventually), so if a folder seems to already exist, a similarly named folder with
-a (possibly higher) number is created instead.
+files. The contents of the zip files are extracted to new folders, which are
+created by default to the same folder, where each zip file is located. The default
+output destination folder, under which the new folder(s) is/are created, may be
+changed with the -Output parameter. When creating new folders Unzip-Silently
+tries to preserve pre-existing content rather than overwrite any existing folders
+(or files eventually), so if a folder seems to already exist, a similarly named
+folder with a (possibly higher) number is created instead.
 
-After the contents of the zip files has been extracted the MD5 and SHA256 hash
+After the contents of the zip files has been extracted, the MD5 and SHA256 hash
 values of the zip files (in machines that have PowerShell version 4 or later
 installed with the inbuilt Get-FileHash cmdlet and in machines that are running
 PowerShell version 2 or 3 by calling a Check-FileHash function, which is based
 on Lee Holmes' Get-FileHash script in "Windows PowerShell Cookbook (O'Reilly)")
 along with other performance related info are displayed.
 
-To delete the original zip file, the parameter -Purge may be added to the
-launching command. Please note that if any of the parameter values include space
-characters, the value should be enclosed in quotation marks (single or double) so
-that PowerShell can interpret the command correctly.
+To delete the original zip file(s), the parameter -Purge may be added to the
+launching command. Please note that if any of the individual parameter values 
+include space characters, the individual value should be enclosed in quotation 
+marks (single or double) so that PowerShell can interpret the command correctly.
 
 .PARAMETER FilePath
 with aliases -FilenameWithPathName, -FullPath, -Source, -File, -ZipFile and -Zip.
-The -FilePath parameter determines, which zip file(s) (or folders) is/are selected
-for content extraction, and in essence define the objects for Unzip-Silently.
+The -FilePath parameter determines, which zip file(s) (or folders that might
+contain zip file(s)) is/are selected for content extraction, and in essence define
+the objects for Unzip-Silently.
 
 By default the -FilePath parameter accepts plain filenames (then the current
 directory gets searched for the inputted filename) or 'FullPath' filenames, which
@@ -584,7 +580,7 @@ of the specified folder (as indicated by the common command 'dir' for example) a
 added to the list of files to be processed. Furthermore, if the -Recurse parameter
 is used in adjunction with the -Include parameter in the command launching
 Unzip-Silently, the search for zip files under the directory, which is defined with
-the -Filepath parameter is done recursively (i.e. the zip files are searched from
+the -Filepath parameter, is done recursively (i.e. the zip files are searched from
 every subfolder level).
 
 To enter multiple zip files for content extraction, please separate each individual
@@ -604,11 +600,12 @@ with the extracted zip file content is/are to be saved. For best results the val
 should be a valid file system path, which points to a directory (for example
 C:\Windows\). When creating new folders Unzip-Silently tries to preserve
 pre-existing content rather than overwrite any existing folders (or files
-eventually), so if a folder seems to already exist, a similarly named folder with
-a (possibly higher) number is created instead in the directory indicated by the
--Output parameter. If no value for the -Output parameter is defined in the
-command launching Unzip-Silently, the zip files are unzipped to new folders,
-which are created to the same folder, where each zip file is located.
+eventually), so if a folder seems to already exist (under the defined -Output
+folder), a similarly named folder with a (possibly higher) number is created
+instead inside the directory indicated by the -Output parameter. If no value for
+the -Output parameter is defined in the command launching Unzip-Silently, the
+zip files are unzipped to new folders, which are created to the same folder,
+where each zip file is located.
 
 .PARAMETER Include
 with aliases -IncludeZipFilesInTheFolderDefinedWithFilepathParameter,
@@ -631,8 +628,8 @@ deleted after the contents of the zip file(s) has been extracted.
 
 .OUTPUTS
 Unzips zip files.
-If the -Purge parameter was added to the command launching Unzip-Silently,
-the original zip file(s) is/are deleted. Displays information about zip file
+If the -Purge parameter is added to the command launching Unzip-Silently,
+the original zip file(s) will be deleted. Displays information about zip file
 content extraction in console. For each zip file content extraction procedure
 also a progress bar is shown in a separate window, which closes after the
 extraction has been done. Another progress bar is also shown in console, if multiple
