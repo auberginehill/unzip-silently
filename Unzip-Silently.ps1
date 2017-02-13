@@ -600,13 +600,13 @@ with an alias -OutputFolder. Specifies the folder, under which the new folder(s)
 with the extracted zip file content is/are to be saved. For best results the -Output
 parameter value should be a valid file system path, which points to a existing
 directory (for example C:\Windows\). When creating new folders (under the defined
--Output folder) Unzip-Silently tries to preserve pre-existing content rather than 
-overwrite any existing folders (or files eventually), so if a folder seems to 
-already exist, a similarly named folder with a (possibly higher) number is created
-instead inside the directory indicated by the -Output parameter. If no value for
-the -Output parameter is defined in the command launching Unzip-Silently, the
-zip files are unzipped to new folders, which are created to the same folder,
-where each zip file is located.
+-Output folder) Unzip-Silently tries to preserve pre-existing content rather than
+overwrite any folders (or files eventually), so if a folder seems to already exist,
+a similarly named folder with a (possibly higher) number is created instead inside
+the directory indicated by the -Output parameter. If no value for the -Output
+parameter is defined in the command launching Unzip-Silently, the zip files are
+unzipped to new folders, which are created to the same folder, where each zip file
+is located.
 
 .PARAMETER Include
 with aliases -IncludeZipFilesInTheFolderDefinedWithFilepathParameter,
@@ -632,9 +632,9 @@ Unzips zip files.
 If the -Purge parameter is added to the command launching Unzip-Silently,
 the original zip file(s) will be deleted. Displays information about zip file
 content extraction in console. For each zip file content extraction procedure
-also a progress bar is shown in a separate window, which closes after the
-extraction has been done. Another progress bar is also shown in console, if multiple
-zip files are being processed.
+a progress bar is shown in a separate window, which closes after the extraction
+has been done. Another progress bar is also shown in console, if multiple zip
+files are being processed.
 
 .NOTES
 Please note that all the parameters can be used in one unzip command and that each
