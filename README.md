@@ -102,7 +102,7 @@
                 <p>
                     <li>
                         <h5>Parameter <code>-Output</code></h5>
-                        <p>with an alias <code>-OutputFolder</code>. Specifies the folder, under which the new folder(s) with the extracted zip file content is/are to be saved. For best results the <code>-Output</code> parameter value should be a valid file system path, which points to a existing directory (for example <code>C:\Windows\</code>). When creating new folders  (under the defined -Output folder) Unzip-Silently tries to preserve pre-existing content rather than overwrite any existing folders (or files eventually), so if a folder seems to already exist, a similarly named folder with a (possibly higher) number is created instead inside the directory indicated by the <code>-Output</code> parameter. If no value for the <code>-Output</code> parameter is defined in the command launching Unzip-Silently, the zip files are unzipped to new folders, which are created to the same folder, where each zip file is located.</p>
+                        <p>with an alias <code>-OutputFolder</code>. Specifies the folder, under which the new folder(s) with the extracted zip file content is/are to be saved. For best results the <code>-Output</code> parameter value should be a valid file system path, which points to a existing directory (for example <code>C:\Windows\</code>). When creating new folders  (under the defined -Output folder) Unzip-Silently tries to preserve pre-existing content rather than overwrite any folders (or files eventually), so if a folder seems to already exist, a similarly named folder with a (possibly higher) number is created instead inside the directory indicated by the <code>-Output</code> parameter. If no value for the <code>-Output</code> parameter is defined in the command launching Unzip-Silently, the zip files are unzipped to new folders, which are created to the same folder, where each zip file is located.</p>
                     </li>
                 </p>
                 <p>
@@ -150,7 +150,7 @@
                     <li>If the <code>-Purge</code> parameter is added to the command launching Unzip-Silently, the original zip file(s) will be deleted.</li>
                 </p>
                 <p>
-                    <li>For each zip file content extraction procedure also a progress bar is shown in a separate window, which closes after the extraction has been done. Another progress bar is also shown in console, if multiple zip files are being processed.</li>
+                    <li>For each zip file content extraction procedure a progress bar is shown in a separate window, which closes after the extraction has been done. Another progress bar is also shown in console, if multiple zip files are being processed.</li>
                 </p>                
             </ul>
         </td>
