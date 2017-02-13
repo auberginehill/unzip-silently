@@ -13,7 +13,7 @@ Param (
     [string[]]$FilePath,
     [Alias("OutputFolder")]
     [string]$Output,
-    [Alias("IncludeZipFilesInTheFolderDefinedWithFilepathParameter","IncludesFolders","Folders","Folder")]
+    [Alias("IncludeZipFilesInTheFolderDefinedWithTheFilepathParameter","IncludesFolders","Folders","Folder")]
     [switch]$Include,
     [switch]$Recurse,
     [Alias("DeleteZip","DeleteOriginal","Delete")]
@@ -598,7 +598,7 @@ value.
 .PARAMETER Output
 with an alias -OutputFolder. Specifies the folder, under which the new folder(s)
 with the extracted zip file content is/are to be saved. For best results the -Output
-parameter value should be a valid file system path, which points to a existing
+parameter value should be a valid file system path, which points to an existing
 directory (for example C:\Windows\). When creating new folders (under the defined
 -Output folder) Unzip-Silently tries to preserve pre-existing content rather than
 overwrite any folders (or files eventually), so if a folder seems to already exist,
@@ -609,7 +609,7 @@ unzipped to new folders, which are created to the same folder, where each zip fi
 is located.
 
 .PARAMETER Include
-with aliases -IncludeZipFilesInTheFolderDefinedWithFilepathParameter,
+with aliases -IncludeZipFilesInTheFolderDefinedWithTheFilepathParameter,
 -IncludesFolders, -Folders and -Folder. If the -Include parameter is added to the
 command launching Unzip-Silently, also paths to a folder may be succesfully entered
 as -Filepath parameter values: all the zip files inside the first directory level of
