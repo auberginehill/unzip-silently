@@ -74,7 +74,7 @@
 ### Screenshot
 
 <ul><ul><ul>
-<img class="screenshot" title="screenshot" alt="screenshot" height="80%" width="80%" src="https://raw.githubusercontent.com/auberginehill/unzip-silently/master/Unzip-Silently.png">
+<img class="screenshot" title="screenshot" alt="screenshot" height="80%" width="80%" src="https://raw.githubusercontent.com/auberginehill/unzip-silently/master/Unzip-Silently_2.png">
 </ul></ul></ul>
 
 
